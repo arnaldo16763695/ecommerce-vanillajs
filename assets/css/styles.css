@@ -4,8 +4,9 @@
 /* variables */
 :root {
     --primary-color: #222;
+    --secondary-color: #088178;
     --text-color: #1a1a1a;
-    --text-color-hover: #088178;
+    --text-color-hover: var(--secondary-color);
     --background-color: #e3e6f3;
    
 }
@@ -77,6 +78,10 @@ p {
     padding: 20px 80px;
     background-color: var(--background-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 
  }
 
@@ -115,3 +120,42 @@ p {
     bottom: -4px;
     left: 20px;
  }
+
+ /* Home page  */
+ #hero {
+    background-image: url("../img/hero4.png");
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+ }
+
+#hero h4 {
+ padding-bottom: 15px;
+}
+#hero h1 {
+ color: var(--secondary-color);
+}
+
+#hero button{
+    background-image: url("../img/button.png");
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 15px;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
