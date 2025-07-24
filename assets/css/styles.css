@@ -4,6 +4,7 @@
 :root {
   --primary-color: #222;
   --secondary-color: #088178;
+  --secondary-color-hover: #066c62;
   --feature-color-1: #fddde4;
   --feature-color-2: #d1e8f2;
   --feature-color-3: #cdd4f8;
@@ -40,7 +41,6 @@ table,
   max-width: 100%;
   overflow-x: auto;
 }
-
 
 h1 {
   font-size: 50px;
@@ -514,8 +514,8 @@ footer {
 }
 
 footer .icons i {
-    font-size: 24px;
-    margin-right: 10px;
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 footer .col {
@@ -584,8 +584,97 @@ footer .copyright {
   padding: 14px;
 }
 
-#page-header h2, #page-header p {
+#page-header h2,
+#page-header p {
   color: var(--text-color-white);
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+#pagination a {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  padding: 15px 20px;
+  color: var(--text-color-white);
+  border-radius: 4px;
+  font-weight: 600;
+}
+#pagination i {
+  font-size: 16px;
+  font-weight: 600;
+}
+#pagination a:hover {
+  background-color: var(--secondary-color-hover);
+  transition: all 0.3s ease;
+}
+
+/* Single Product */
+
+#product-details {
+  display: flex;
+}
+
+#product-details .single-pro-image {
+  width: 40%;
+  margin-right: 50px;
+}
+
+#product-details .small-img-group {
+  display: flex;
+  margin-top: 10px;
+  gap: 2px;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+#product-details .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#product-details .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+#product-details .single-pro-details h2 {
+  font-size: 26px;
+}
+#product-details .single-pro-details select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+#product-details .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#product-details .single-pro-details input:focus {
+  outline: none;
+}
+
+#product-details .single-pro-details button {
+  background-color: var(--secondary-color);
+  color: var(--text-color-white); 
+}
+
+#product-details .single-pro-details button:hover {
+  background-color: var(--secondary-color-hover);
+  transition: all 0.3s ease;
+}
+
+#product-details .single-pro-details p {
+  line-height: 25px;
 }
 
 /* start media query */
@@ -751,4 +840,23 @@ footer .copyright {
   footer .copyright {
     text-align: start;
   }
+
+  /* Single product */
+  #product-details {
+    flex-direction: column;
+  }
+
+  #product-details .single-pro-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #product-details .single-pro-details {
+    width: 100%;
+  }
+
+  #product-details .single-pro-details h4 {
+    padding: 20px 0 20px 0;
+  }
+
 }
