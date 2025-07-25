@@ -111,6 +111,8 @@ button.white {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -665,7 +667,7 @@ footer .copyright {
 
 #product-details .single-pro-details button {
   background-color: var(--secondary-color);
-  color: var(--text-color-white); 
+  color: var(--text-color-white);
 }
 
 #product-details .single-pro-details button:hover {
@@ -777,8 +779,19 @@ footer .copyright {
 
 @media (max-width: 470px) {
   #header {
-    padding: 10px 20px;
+    padding: 10px 20px; 
   }
+
+  /* set header in bottom*/
+/* 
+  #header {
+    padding: 10px 20px;
+    position:fixed;
+    top:auto;
+    bottom: 0;
+    left:0;
+    right:0;    
+  } */
 
   #hero {
     padding: 0 20px;
@@ -859,4 +872,17 @@ footer .copyright {
     padding: 20px 0 20px 0;
   }
 
+  #page-header {
+    width: 100%;
+    height: 20vh;
+  }
+
+  #page-header p {
+    text-align: center;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  #page-header h2 {
+    font-size: 26px;
+  }
 }
